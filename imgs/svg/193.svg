@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="400" height="400" viewBox="0 0 400 400" xml:space="preserve">
+<desc>Created with Fabric.js 3.6.2</desc>
+<defs>
+</defs>
+<g transform="matrix(4.17 0 0 4.17 233.33 183.33)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(84,110,122); fill-rule: nonzero; opacity: 1;"  transform=" translate(-32, -20)" d="M 22 30 L 22 23 L 40 19.382813 L 40 12 L 38 12 L 38 10 L 42 10 L 42 21 L 24 24.617188 L 24 30 Z" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 193.75 145.83)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(233,30,99); fill-rule: nonzero; opacity: 1;"  transform=" translate(-22.5, -11)" d="M 37.4375 17 L 7.566406 17 C 6.703125 17 6 16.296875 6 15.433594 L 6 6.566406 C 6 5.703125 6.703125 5 7.566406 5 L 37.433594 5 C 38.296875 5 39 5.703125 39 6.566406 L 39 15.433594 C 39 16.296875 38.296875 17 37.4375 17 Z" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 195.83 247.92)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,193,7); fill-rule: nonzero; opacity: 1;"  transform=" translate(-23, -35.5)" d="M 20 28 L 26 28 L 26 43 L 20 43 Z" stroke-linecap="round" />
+</g>
+</svg>

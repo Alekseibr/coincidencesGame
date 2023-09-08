@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="400" height="400" viewBox="0 0 400 400" xml:space="preserve">
+<desc>Created with Fabric.js 3.6.2</desc>
+<defs>
+</defs>
+<g transform="matrix(4.17 0 0 4.17 141 230.83)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(26,35,126); fill-rule: nonzero; opacity: 1;"  transform=" translate(-9.84, -31.4)" d="M 7.101563 28 L 5 36 C 5 36 12.398438 36.5 14.398438 30.300781 C 16.398438 24.101563 7.101563 28 7.101563 28 Z" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 137.5 204.28)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(159,168,218); fill-rule: nonzero; opacity: 1;"  transform=" translate(-9, -25.03)" d="M 0 17 C 0.800781 21.699219 4.300781 34 18 34 C 16.800781 27 14 22 14 22 C 14 22 4.800781 19.300781 1.199219 16.300781 C 0.800781 15.898438 0 15.898438 0 17 Z" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 141.25 202.5)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(121,134,203); fill-rule: nonzero; opacity: 1;"  transform=" translate(-9.9, -24.6)" d="M 7.699219 21.101563 C 8.5 21.5 9.601563 21 10.300781 21.300781 C 10.699219 21.398438 10.300781 21.699219 10.898438 22.5 C 12.101563 24.101563 13.800781 25.601563 16.101563 26 C 16.300781 26.601563 16.5 27.300781 16.699219 28.101563 C 12 27.601563 9.101563 23.800781 7.699219 21.101563 Z M 17.601563 32 C 17.5 31.300781 17.300781 30.601563 17.199219 30 C 9.199219 29.5 6 23 4.800781 19.300781 C 4 18.699219 3.101563 18 2.199219 17.199219 C 2.601563 19.101563 5.398438 31.699219 17.601563 32 Z" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 201.25 197.92)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(48,63,159); fill-rule: nonzero; opacity: 1;"  transform=" translate(-24.3, -23.5)" d="M 38.101563 11.898438 C 38.101563 11.898438 38.898438 8.101563 31 4 C 27.699219 10.101563 35.199219 13.199219 35 16 C 34.800781 18.800781 30 19 30 19 C 26.898438 18.5 21.898438 8 17 8 C 12.101563 8 1.898438 9.398438 1 12 C 0.101563 14.601563 1 16 1 16 C 1 16 9.101563 22.199219 13 22 C 15.898438 21.800781 20 43 20 43 C 20 43 25.199219 41.398438 25.5 33.199219 C 36.398438 30 38 18 38 18 C 38.5 13 44.898438 21 48 14 C 39.601563 8.800781 38.101563 11.898438 38.101563 11.898438 Z" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 180.1 225)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(92,107,192); fill-rule: nonzero; opacity: 1;"  transform=" translate(-19.22, -30)" d="M 23 27 C 23 27 24.601563 26.601563 25 28 C 27.300781 40.800781 20 44 20 44 C 20 44 15.898438 21.800781 13 22 C 15.300781 22.800781 16 26.699219 19.101563 27.199219 Z M 15 20 C 16.101563 20 17 19.101563 17 18 C 17 16.898438 16.101563 16 15 16 C 13.898438 16 13 16.898438 13 18 C 13 19.101563 13.898438 20 15 20 Z" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 142.87 177.91)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(38,50,56); fill-rule: nonzero; opacity: 1;"  transform=" translate(-10.29, -18.7)" d="M 20 23.398438 C 19.898438 23.398438 18.199219 24.398438 17 24.398438 C 16.199219 24.398438 15.300781 24.300781 14.300781 23.101563 C 14 22.800781 13.398438 22.699219 12.5 22.601563 C 10.300781 22.199219 7.199219 21.601563 1.800781 16.800781 C 1.300781 16.300781 1 16 1 16 C 1 16 0.300781 14.898438 0.699219 13 C 7.199219 19.601563 10.398438 20.300781 12.800781 20.699219 C 13.898438 20.898438 14.898438 21 15.699219 21.699219 L 15.800781 21.800781 C 16.898438 23.199219 20 23.398438 20 23.398438 Z M 14 17 C 13.5 17 13 17.398438 13 18 C 13 18.601563 13.398438 19 14 19 C 14.601563 19 15 18.601563 15 18 C 15 17.398438 14.5 17 14 17 Z" stroke-linecap="round" />
+</g>
+</svg>

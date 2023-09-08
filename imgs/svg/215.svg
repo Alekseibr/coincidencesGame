@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="400" height="400" viewBox="0 0 400 400" xml:space="preserve">
+<desc>Created with Fabric.js 3.6.2</desc>
+<defs>
+</defs>
+<g transform="matrix(4.17 0 0 4.17 200 200)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,117,76); fill-rule: nonzero; opacity: 1;"  transform=" translate(-24, -24)" d="M 44 24 C 44 35.046875 35.046875 44 24 44 C 12.953125 44 4 35.046875 4 24 C 4 12.953125 12.953125 4 24 4 C 35.046875 4 44 12.953125 44 24" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 200 200)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(230,74,25); fill-rule: nonzero; opacity: 1;"  transform=" translate(-24, -24)" d="M 25 25 L 31.058594 25 C 31.433594 30.015625 34.582031 34.386719 39.195313 36.984375 C 39.632813 36.472656 40.046875 35.941406 40.429688 35.390625 C 36.289063 33.160156 33.441406 29.363281 33.058594 25 L 43.949219 25 C 43.964844 24.667969 44 24.339844 44 24 C 44 23.660156 43.964844 23.332031 43.949219 23 L 33.058594 23 C 33.441406 18.636719 36.289063 14.839844 40.429688 12.609375 C 40.046875 12.054688 39.632813 11.527344 39.195313 11.015625 C 34.585938 13.613281 31.433594 17.984375 31.058594 23 L 25 23 L 25 4.050781 C 24.667969 4.035156 24.339844 4 24 4 C 23.660156 4 23.332031 4.035156 23 4.050781 L 23 23 L 16.941406 23 C 16.566406 17.984375 13.417969 13.613281 8.804688 11.015625 C 8.367188 11.527344 7.953125 12.058594 7.570313 12.609375 C 11.710938 14.839844 14.558594 18.636719 14.9375 23 L 4.050781 23 C 4.035156 23.332031 4 23.660156 4 24 C 4 24.339844 4.035156 24.667969 4.050781 25 L 14.941406 25 C 14.558594 29.363281 11.710938 33.160156 7.574219 35.390625 C 7.957031 35.945313 8.367188 36.472656 8.804688 36.984375 C 13.417969 34.386719 16.566406 30.015625 16.941406 25 L 23 25 L 23 43.949219 C 23.332031 43.964844 23.660156 44 24 44 C 24.339844 44 24.667969 43.964844 25 43.949219 Z" stroke-linecap="round" />
+</g>
+</svg>

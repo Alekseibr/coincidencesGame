@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="400" height="400" viewBox="0 0 400 400" xml:space="preserve">
+<desc>Created with Fabric.js 3.6.2</desc>
+<defs>
+</defs>
+<g transform="matrix(4.17 0 0 4.17 200 164.58)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(84,110,122); fill-rule: nonzero; opacity: 1;"  transform=" translate(-24, -15.5)" d="M 23 7 h 2 v 17 h -2 V 7 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 154.17 275)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(84,110,122); fill-rule: nonzero; opacity: 1;"  transform=" translate(-13, -42)" d="M 11 44 v -2 c 1.1 0 2 -0.9 2 -2 h 2 C 15 42.2 13.2 44 11 44 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 245.83 275)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(84,110,122); fill-rule: nonzero; opacity: 1;"  transform=" translate(-35, -42)" d="M 37 44 v -2 c -1.1 0 -2 -0.9 -2 -2 h -2 C 33 42.2 34.8 44 37 44 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 233.33 129.17)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(84,110,122); fill-rule: nonzero; opacity: 1;"  transform=" translate(-32, -7)" d="M 36 9 h -8 l 3 -4 h 2 L 36 9 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 212.5 120.83)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(84,110,122); fill-rule: nonzero; opacity: 1;"  transform=" translate(-27, -5)" d="M 25 7 h -2 c 0 -1.6 1.1 -4 4 -4 h 4 v 2 h -4 C 25.1 5 25 6.7 25 7 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 233.33 116.67)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(84,110,122); fill-rule: nonzero; opacity: 1;"  transform=" translate(-32, -4)" d="M 33 5 h -2 V 3 C 32 3 33 3.7 33 5 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 241.67 145.83)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(33,150,243); fill-rule: nonzero; opacity: 1;"  transform=" translate(-34, -11)" d="M 35 11 c 0 0.6 -0.4 1 -1 1 s -1 -0.4 -1 -1 s 0.4 -1 1 -1 S 35 10.4 35 11 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 241.67 158.33)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(33,150,243); fill-rule: nonzero; opacity: 1;"  transform=" translate(-34, -14)" d="M 35 14 c 0 0.6 -0.4 1 -1 1 s -1 -0.4 -1 -1 s 0.4 -1 1 -1 S 35 13.4 35 14 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 241.67 170.83)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(33,150,243); fill-rule: nonzero; opacity: 1;"  transform=" translate(-34, -17)" d="M 35 17 c 0 0.6 -0.4 1 -1 1 s -1 -0.4 -1 -1 s 0.4 -1 1 -1 S 35 16.4 35 17 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 241.67 183.33)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(33,150,243); fill-rule: nonzero; opacity: 1;"  transform=" translate(-34, -20)" d="M 35 20 c 0 0.6 -0.4 1 -1 1 s -1 -0.4 -1 -1 s 0.4 -1 1 -1 S 35 19.4 35 20 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 225 183.33)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(33,150,243); fill-rule: nonzero; opacity: 1;"  transform=" translate(-30, -20)" d="M 31 20 c 0 0.6 -0.4 1 -1 1 s -1 -0.4 -1 -1 s 0.4 -1 1 -1 S 31 19.4 31 20 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 225 170.83)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(33,150,243); fill-rule: nonzero; opacity: 1;"  transform=" translate(-30, -17)" d="M 31 17 c 0 0.6 -0.4 1 -1 1 s -1 -0.4 -1 -1 s 0.4 -1 1 -1 S 31 16.4 31 17 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 225 158.33)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(33,150,243); fill-rule: nonzero; opacity: 1;"  transform=" translate(-30, -14)" d="M 31 14 c 0 0.6 -0.4 1 -1 1 s -1 -0.4 -1 -1 s 0.4 -1 1 -1 S 31 13.4 31 14 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 225 145.83)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(33,150,243); fill-rule: nonzero; opacity: 1;"  transform=" translate(-30, -11)" d="M 31 11 c 0 0.6 -0.4 1 -1 1 s -1 -0.4 -1 -1 s 0.4 -1 1 -1 S 31 10.4 31 11 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(4.17 0 0 4.17 200 227.08)" id="surface1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(187,222,251); fill-rule: nonzero; opacity: 1;"  transform=" translate(-24, -30.5)" d="M 36 40 c -5 0 -19 0 -24 0 S 4 21 4 21 s 13 2 20 2 s 20 -2 20 -2 S 41 40 36 40 z" stroke-linecap="round" />
+</g>
+</svg>
