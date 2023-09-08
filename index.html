@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     <title>Игра совпадения</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="manifest" href="./imgs/favicons/site.webmanifest" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="manifest" href="/imgs/favicons/site.webmanifest" />
 </head>
 <body>
      <div class="preloader">
@@ -15,18 +16,18 @@
     <!--незабываем добавить в теги музыки класс music это подвязано в index.js для общей громкости музыки
     и соответственно класс sound для звуков игры-->
     <!--музыка-->
-    <audio id="playerStartScreen" class="music" src="./sound/intro.mp3" type="audio/mpeg" loop="loop"></audio>
-    <audio id="playerOptions" class="music" src="./sound/options.mp3" type="audio/mpeg" loop="loop"></audio>
-    <audio id="playerRecords" class="music" src="./sound/records.mp3" type="audio/mpeg"  loop="loop"></audio>
-    <audio id="playerGame" class="music" src="./sound/gameMusic/1.mp3" type="audio/mpeg"></audio>
-    <audio id="playerLvlEndBad" class="music" src="./sound/lvlEndBad.mp3" type="audio/mpeg"></audio>
-    <audio id="playerLvlEndGood" class="music" src="./sound/lvlEndGood.mp3" type="audio/mpeg"></audio>
+    <audio id="playerStartScreen" class="music" src="/sound/intro.mp3" type="audio/mpeg" loop="loop"></audio>
+    <audio id="playerOptions" class="music" src="/sound/options.mp3" type="audio/mpeg" loop="loop"></audio>
+    <audio id="playerRecords" class="music" src="/sound/records.mp3" type="audio/mpeg"  loop="loop"></audio>
+    <audio id="playerGame" class="music" src="/sound/gameMusic/1.mp3" type="audio/mpeg"></audio>
+    <audio id="playerLvlEndBad" class="music" src="/sound/lvlEndBad.mp3" type="audio/mpeg"></audio>
+    <audio id="playerLvlEndGood" class="music" src="/sound/lvlEndGood.mp3" type="audio/mpeg"></audio>
     <!--звуки-->
-    <audio id="openCardsSound" class="sound" src="./sound/gameSound/openCards.mp3" type="audio/mpeg"></audio>
-    <audio id="cardsMatchSound" class="sound" src="./sound/gameSound/cardsMatch.mp3" type="audio/mpeg"></audio>
-    <audio id="closeCardsSound" class="sound" src="./sound/gameSound/closeCards.mp3" type="audio/mpeg"></audio>
-    <audio id="playerSplash" class="sound" src="./sound/levelSplash.mp3" type="audio/mpeg"></audio>
+    <audio id="openCardsSound" class="sound" src="/sound/gameSound/openCards.mp3" type="audio/mpeg"></audio>
+    <audio id="cardsMatchSound" class="sound" src="/sound/gameSound/cardsMatch.mp3" type="audio/mpeg"></audio>
+    <audio id="closeCardsSound" class="sound" src="/sound/gameSound/closeCards.mp3" type="audio/mpeg"></audio>
+    <audio id="playerSplash" class="sound" src="/sound/levelSplash.mp3" type="audio/mpeg"></audio>
 
-    <script src="./index.js"></script>
+    <script src="/index.js"></script>
 </body>
 </html>

@@ -113,10 +113,10 @@ body.insertAdjacentHTML('afterbegin', `
     <main>
         <div class="wrap_main">
             <div class="image_card_menu1">
-                <img src="./imgs/svg/1.svg" alt="картинка_1" />
+                <img src="/imgs/svg/1.svg" alt="картинка_1" />
             </div>
             <div class="image_card_menu2">
-                 <img src="./imgs/svg/121.svg" alt="картинка_2" />
+                 <img src="/imgs/svg/121.svg" alt="картинка_2" />
             </div>
         </div>
     </main>
@@ -155,8 +155,8 @@ function sleep(ms) {
 
 async function startAnimationCardFirstScreen() {
   await sleep(100);
-  menu1.src = `./imgs/svg/${index1}.svg`;
-  menu2.src = `./imgs/svg/${index2}.svg`;
+  menu1.src = `/imgs/svg/${index1}.svg`;
+  menu2.src = `/imgs/svg/${index2}.svg`;
   index1++;
   index2--;
   if(index1 === 61){
@@ -223,7 +223,7 @@ function changeSoundControl(screen, musicVolumeState, soundVolumeState){
         currentMusicState = playerOptions;
     }
     if(screen == 'startPlayGame'){
-        playerGame.src = `./sound/gameMusic/${randomMusicGame()}`;
+        playerGame.src = `/sound/gameMusic/${randomMusicGame()}`;
         playerGame.play();
         currentMusicState = playerGame;
          //Добавить в этой функции в условие if(screen == 'exit').
@@ -456,7 +456,7 @@ function startPlayGame(){
                 
         let img = document.createElement("IMG");
         //вместо i будет вызов функции из массива по рандому
-        img.src = `./imgs/svg/${resultArrayCards[i]}.svg`
+        img.src = `/imgs/svg/${resultArrayCards[i]}.svg`
         backSideCard.append(img);
         /**************************************************************************/ 
         resizeCards();//меняем размер карточек по мере их увеличения
