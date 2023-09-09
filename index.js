@@ -1,5 +1,15 @@
 "use strict"
 window.onload = function() {
+    //убираем вызов контекстного меню во всей игре
+document.documentElement.addEventListener('contextmenu', (e)=>{
+    e.preventDefault();
+});
+ // решаем проблему с браузерной строкой в мобильниках
+    // используем переменную в CSS
+    // получаем текущее значение высоты
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+ 
   let btnStart = document.querySelector('.preloader .btn');
   let preloader = document.querySelector('.preloader');
   btnStart.focus();
@@ -24,10 +34,7 @@ window.addEventListener('resize', () => {
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
-//убираем вызов контекстного меню во всей игре
-document.documentElement.addEventListener('contextmenu', (e)=>{
-    e.preventDefault();
-});
+
  
 let currentMusicState = playerStartScreen;//текущая музыка 
 let volumeSwitchStateMusic = true;//состояние переключателя (вкл/откл музыки игры в настройках)
