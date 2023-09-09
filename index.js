@@ -166,9 +166,8 @@ async function startAnimationCardFirstScreen() {
   } 
   startAnimationCardFirstScreen();
 }
-if (document.readyState == 'complete') {
-    startAnimationCardFirstScreen();
-}
+
+startAnimationCardFirstScreen();
 //конец анимации карточек 1 экран
 
 //функция контроля изменения экранов
