@@ -159,15 +159,16 @@ async function startAnimationCardFirstScreen() {
   menu2.src = `./imgs/svg/${index2}.svg`;
   index1++;
   index2--;
-  console.log('index1:'+index1+'-'+'index2:'+index2);
+
   if(index1 === 61 && index2 === 59){
       scale();
       return;
   } 
   startAnimationCardFirstScreen();
 }
-
-startAnimationCardFirstScreen();
+if (document.readyState == 'complete') {
+    startAnimationCardFirstScreen();
+}
 //конец анимации карточек 1 экран
 
 //функция контроля изменения экранов
