@@ -1,11 +1,5 @@
 "use strict"
 window.onload = function() {
-    // решаем проблему с браузерной строкой в мобильниках
-    // используем переменную в CSS
-    // получаем текущее значение высоты сразу при загрузке страницы
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-
   let btnStart = document.querySelector('.preloader .btn');
   let preloader = document.querySelector('.preloader');
   btnStart.focus();
