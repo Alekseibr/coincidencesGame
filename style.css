@@ -109,6 +109,7 @@ html,body{
     text-shadow: 0.06rem 0.1rem 0.1rem rgb(209, 209, 18);
     font-weight: bold;
     transition-duration: 1s;
+    border: 1px solid black;
 }
 /*конец кнопка 1 экран*/
 

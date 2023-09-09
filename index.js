@@ -154,7 +154,7 @@ function sleep(ms) {
 }
 
 async function startAnimationCardFirstScreen() {
-  await sleep(100);
+  await sleep(200);
   menu1.src = `./imgs/svg/${index1}.svg`;
   menu2.src = `./imgs/svg/${index2}.svg`;
   index1++;
