@@ -135,8 +135,8 @@ body.insertAdjacentHTML('afterbegin', `
 let menu1 = document.querySelector('.image_card_menu1 img');
 let menu2 = document.querySelector('.image_card_menu2 img');
 
-let index1 = 1;
-let index2 = 119;
+let index1 = 55;
+let index2 = 65;
 
 function scale(){
     menu1.style.transform = 'scale(2)';
@@ -159,7 +159,8 @@ async function startAnimationCardFirstScreen() {
   menu2.src = `./imgs/svg/${index2}.svg`;
   index1++;
   index2--;
-  if(index1 === 61){
+  console.log('index1:'+index1+'-'+'index2:'+index2);
+  if(index1 === 61 && index2 === 59){
       scale();
       return;
   } 
