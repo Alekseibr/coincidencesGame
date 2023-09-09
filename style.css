@@ -708,6 +708,7 @@ html,body{
     height: 35vmin;
 }
 .frontSideCard{
+    display: block;
     background-color: #7b40dd;
 	background-image: url('./imgs/backSideCard.svg');
     background-size: 100% 100%;
