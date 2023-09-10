@@ -270,6 +270,13 @@ function changeSoundControl(screen, musicVolumeState, soundVolumeState){
     if(screen == 'startPlayGame'){
         playerGame.src = `./sound/gameMusic/${randomMusicGame()}`;
         playerGame.play();
+        
+        playerGame.onstalled = (e) =>{
+            console.log(e.target.readyState);
+            console.log('плохое интернет соединение');
+            alert('плохое интернет соединение')
+        } 
+        
         currentMusicState = playerGame;
          //Добавить в этой функции в условие if(screen == 'exit').
     }
@@ -644,10 +651,9 @@ function startPlayGame(){
                         
                     })();
                     
-                    //сначала анимаци уровня потом очков 
-                    // отредактировать заставку проигранного уровня
+                    //сначала анимация уровня потом очков 
                     // console.log(currentMusicState.duration); //5.891167 длина музыки при прохождении уровня
-                    // для появления кнопки след. уровня
+                    // для рекламы
 
                     //остановка анимации на заднем плане игры
                     let animationBakgroundGame = document.querySelectorAll('.particles > span');
