@@ -16,7 +16,10 @@ for(let file of mediaFiles){
     if(file.tagName == 'IMG'){
         file.onload = () => {
             i++;
-            percents.textContent = ((i * 90) / mediaFiles.length).toFixed(1);           
+            percents.textContent = ((i * 90) / mediaFiles.length).toFixed(1); 
+            if(res == 10) {
+                percents.textContent = 100;
+              }          
         }
     }
      if(file.tagName == 'AUDIO'){
