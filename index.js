@@ -271,10 +271,12 @@ function changeSoundControl(screen, musicVolumeState, soundVolumeState){
         playerGame.src = `./sound/gameMusic/${randomMusicGame()}`;
         playerGame.play();
         
-        playerGame.onstalled = (e) =>{
-            console.log(e.target.readyState);
-            console.log('плохое интернет соединение');
-            alert('плохое интернет соединение')
+        playerGame.onloadeddata = (e) =>{
+            if(e.target.readyState < 4){
+                console.log('плохое интернет соединение');
+                alert('плохое интернет соединение')
+            }
+           
         } 
         
         currentMusicState = playerGame;
