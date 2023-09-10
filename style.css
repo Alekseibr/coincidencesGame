@@ -18,10 +18,18 @@ html,body{
     width: 100%;
     position: absolute;
     display: flex;
-    justify-content: center;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
     align-items: center;
     background-color: black;
     transition: 1s;
+}
+.preloader h2{
+    text-align: center;
+    color: white;
+}
+.percents{
+    color: white; 
 }
 .preloader .btn{
     font-size: 1rem;

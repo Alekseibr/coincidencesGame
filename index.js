@@ -1,4 +1,28 @@
 "use strict"
+// loader
+
+document.addEventListener("DOMContentLoaded", () => {
+    
+
+let percents = document.querySelector('.percents');
+let mediaFiles = document.querySelectorAll('img, video, svg, png, mpeg, media');
+
+console.log(mediaFiles);
+let i = 0;
+
+Array.from(mediaFiles).forEach((file, index) => {
+    file.onload = () => {
+        i++;
+        percents.textContent = ((i * 100) / mediaFiles.length).toFixed(1);
+
+        if(i == mediaFiles.length) {
+          percents.textContent = 100;
+
+        }
+    }
+})
+});
+
 window.onload = function() {
     // решаем проблему с браузерной строкой в мобильниках
     // используем переменную в CSS
