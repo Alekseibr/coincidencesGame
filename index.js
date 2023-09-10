@@ -2,6 +2,11 @@
 // loader
 // дом построен можно обращаться к файлам
 document.addEventListener("DOMContentLoaded", () => {
+
+//убираем вызов контекстного меню во всей игре
+document.documentElement.addEventListener('contextmenu', (e)=>{
+    e.preventDefault();
+});
     
 let percents = document.querySelector('.percents'); // проценты
 let mediaFiles = document.querySelectorAll('img, audio'); // все аудио и картинки
@@ -72,10 +77,7 @@ window.addEventListener('resize', () => {
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
-//убираем вызов контекстного меню во всей игре
-document.documentElement.addEventListener('contextmenu', (e)=>{
-    e.preventDefault();
-});
+
  
 let currentMusicState = playerStartScreen;//текущая музыка 
 let volumeSwitchStateMusic = true;//состояние переключателя (вкл/откл музыки игры в настройках)
