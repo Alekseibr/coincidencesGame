@@ -5,22 +5,33 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
 let percents = document.querySelector('.percents');
-let mediaFiles = document.querySelectorAll('img, video, svg, png, mpeg, media');
+let mediaFiles = document.querySelectorAll('img, audio');
 
-console.log(mediaFiles);
+
 let i = 0;
+let res = 0;
 
-Array.from(mediaFiles).forEach((file, index) => {
-    file.onload = () => {
-        i++;
-        percents.textContent = ((i * 100) / mediaFiles.length).toFixed(1);
+for(let file of mediaFiles){
 
-        if(i == mediaFiles.length) {
-          percents.textContent = 100;
-
+    if(file.tagName == 'IMG'){
+        file.onload = () => {
+            i++;
+            percents.textContent = ((i * 100) / mediaFiles.length).toFixed(1);           
         }
     }
-})
+     if(file.tagName == 'AUDIO'){
+        file.onloadeddata = () => {
+            res++;
+            i++;
+            percents.textContent = ((i * 100) / mediaFiles.length).toFixed(1);           
+            if(res == 10) {
+              percents.textContent = 100;
+            }
+        }
+    }
+    
+}
+
 });
 
 window.onload = function() {
