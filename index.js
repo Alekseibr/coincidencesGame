@@ -20,7 +20,7 @@ for(let file of mediaFiles){
         }
     }
      if(file.tagName == 'AUDIO'){
-        file.onloadeddata = () => {
+        file.oncanplay = () => {
             res++;
             i++;
             percents.textContent = ((i * 100) / mediaFiles.length).toFixed(1);           
