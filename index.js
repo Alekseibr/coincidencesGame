@@ -1,41 +1,45 @@
 "use strict"
 // loader
-
+// дом построен можно обращаться к файлам
 document.addEventListener("DOMContentLoaded", () => {
     
-
-let percents = document.querySelector('.percents');
-let mediaFiles = document.querySelectorAll('img, audio');
-
-
+let percents = document.querySelector('.percents'); // проценты
+let mediaFiles = document.querySelectorAll('img, audio'); // все аудио и картинки
+let btnStart = document.querySelector('.preloader .btn'); // кнопка старта
 let i = 0;
 let res = 0;
 
 for(let file of mediaFiles){
-
+// разные медиафайлы требуют свои события загрузки, для этого необходимы проверки
     if(file.tagName == 'IMG'){
+        // обработчик картинка загружена
         file.onload = () => {
             i++;
-            percents.textContent = ((i * 90) / mediaFiles.length).toFixed(1); 
+            // картинки в данном случае загружаются быстрее, поэтому ограничил 90%
+            percents.textContent = ((i * 90) / mediaFiles.length).toFixed(1);
+            //фиксит баг в мобильном фаерфокс (он приоритетно сначала загружает аудио, поэтому показывает сначала 100% потом 90%) 
             if(res == 10) {
                 percents.textContent = 100;
               }          
         }
     }
      if(file.tagName == 'AUDIO'){
+        // обработчик файл готов к воспроизведению
         file.oncanplay = () => {
             res++;
             i++;
-            percents.textContent = ((i * 100) / mediaFiles.length).toFixed(1);           
+            percents.textContent = ((i * 100) / mediaFiles.length).toFixed(1);
+            // 10 audio прописанных в HTML           
             if(res == 10) {
-              percents.textContent = 100;
+              percents.textContent = 100; // просто для красоты чтобы выводило 100% а не 100.0%
+              btnStart.style.visibility = 'visible';
+              btnStart.style.opacity = '1';
             }
         }
-    }
-    
+    }  
 }
-
 });
+//Конец loader
 
 window.onload = function() {
     // решаем проблему с браузерной строкой в мобильниках
