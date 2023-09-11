@@ -23,7 +23,7 @@ for(let file of mediaFiles){
             // картинки в данном случае загружаются быстрее, поэтому ограничил 90%
             percents.textContent = ((i * 90) / mediaFiles.length).toFixed(1);
             //фиксит баг в мобильном фаерфокс (он приоритетно сначала загружает аудио, поэтому показывает сначала 100% потом 90%) 
-            if(res == 10) {
+            if(res == 23) {
                 percents.textContent = 100;
               }          
         }
@@ -35,7 +35,7 @@ for(let file of mediaFiles){
             i++;
             percents.textContent = ((i * 100) / mediaFiles.length).toFixed(1);
             // 10 audio прописанных в HTML           
-            if(res == 10) {
+            if(res == 23) {
               percents.textContent = 100; // просто для красоты чтобы выводило 100% а не 100.0%
               btnStart.style.visibility = 'visible';
               btnStart.style.opacity = '1';
@@ -1089,7 +1089,7 @@ function records(){
 //возвращает рандомную музыку для игры
 function randomMusicGame(){
     let min = 1;
-    let max = 19; // выбираем максимум песен в папке
+    let max = 14; // выбираем максимум песен в папке
     let result = Math.floor(min + Math.random() * (max + 1 - min));
     return (result + '.mp3')
 }
