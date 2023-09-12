@@ -18,8 +18,16 @@
 </head>
 <body>
      <div class="preloader">
-        <h2>Загрузка игры:&nbsp;<span class="percents">0</span><span>%</span></h2>
-        <button class="btn">старт</button>
+        <div class="wrapAllPreloader">
+            <div class="wrap_percents">
+                <div>Загрузка:&nbsp;<span class="percents">0</span><span class="percents">%</span></div>
+                <div class="lds-ellipsis"><div>
+                </div><div></div><div></div><div></div></div>
+            </div>
+            <div>
+                <button class="btn preloadBtn">старт</button>
+            </div>
+        </div>
     </div>
     <!--незабываем добавить в теги музыки класс music это подвязано в index.js для общей громкости музыки
     и соответственно класс sound для звуков игры-->

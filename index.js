@@ -11,6 +11,8 @@ document.documentElement.addEventListener('contextmenu', (e)=>{
 let percents = document.querySelector('.percents'); // проценты
 let mediaFiles = document.querySelectorAll('img, audio'); // все аудио и картинки
 let btnStart = document.querySelector('.preloader .btn'); // кнопка старта
+let ldsEllipsis = document.querySelector('.lds-ellipsis'); // анимация прелоадера
+let wrapPercents = document.querySelector('.wrap_percents'); //обертка процентов
 let i = 0;
 let res = 0;
 
@@ -34,11 +36,18 @@ for(let file of mediaFiles){
             res++;
             i++;
             percents.textContent = ((i * 100) / mediaFiles.length).toFixed(1);
-            // 10 audio прописанных в HTML           
+            // 23 audio прописанных в HTML           
             if(res == 23) {
               percents.textContent = 100; // просто для красоты чтобы выводило 100% а не 100.0%
               btnStart.style.visibility = 'visible';
               btnStart.style.opacity = '1';
+              ldsEllipsis.remove()
+              wrapPercents.children[0].remove();
+              wrapPercents.style.position = 'static';
+              let div = document.createElement('div');
+              div.textContent = 'Для начала игры нажмите кнопку СТАРТ';
+              div.className = 'preloaderTextStart';
+              wrapPercents.prepend(div);
             }
         }
     }  
@@ -68,6 +77,8 @@ window.onload = function() {
 };
         
 function main() {
+    let preloader = document.querySelector('.preloader');
+    preloader.remove(); //удаляем прелоадер
     // решаем проблему с браузерной строкой в мобильниках
     // используем переменную в CSS
     // слушаем событие resize при изменении размера получаем текущее значение высоты
