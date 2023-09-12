@@ -77,8 +77,6 @@ window.onload = function() {
 };
         
 function main() {
-    // let preloader = document.querySelector('.preloader');
-    // preloader.remove(); //удаляем прелоадер
     // решаем проблему с браузерной строкой в мобильниках
     // используем переменную в CSS
     // слушаем событие resize при изменении размера получаем текущее значение высоты
@@ -125,7 +123,7 @@ let idAnimationProgress;
 let oneTimeMusicDownload = false; //для разовой подгрузки общей музыки и звуков игры по действию пользователя
 let stateGamePause = true;//состояние play/pause в игре
 
-//удалили предоадер
+//удалили предоадер!!!!!!!!!!!!!!!!!!!!!!!!!!
 body.firstElementChild.parentNode.removeChild(body.firstElementChild)
 
 //функция отлючения музыки если вкладка браузера не активна
@@ -282,7 +280,6 @@ function changeSoundControl(screen, musicVolumeState, soundVolumeState){
         playerGame.src = `./sound/gameMusic/${randomMusicGame()}`;
         playerGame.play();
         currentMusicState = playerGame;
-         //Добавить в этой функции в условие if(screen == 'exit').
     }
     if(screen == 'lvlEndBad'){
         playerGame.pause();
