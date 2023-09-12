@@ -77,10 +77,8 @@ window.onload = function() {
 };
         
 function main() {
-    //подумать
-    // let preloader = document.querySelector('.preloader');
-    // preloader.remove(); //удаляем прелоадер
-
+    let preloader = document.querySelector('.preloader');
+    preloader.remove(); //удаляем прелоадер
     // решаем проблему с браузерной строкой в мобильниках
     // используем переменную в CSS
     // слушаем событие resize при изменении размера получаем текущее значение высоты
