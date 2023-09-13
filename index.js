@@ -62,6 +62,12 @@ window.onload = function() {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+  window.addEventListener('resize', () => {
+    // получаем текущее значение высоты
+    vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+
   let btnStart = document.querySelector('.preloader .btn');
   let preloader = document.querySelector('.preloader');
   btnStart.focus();
