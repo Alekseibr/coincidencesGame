@@ -926,7 +926,6 @@ html,body{
 }
 .btnNexLvl{
     font-size: 1em;
-    /* margin: 0px 10%; */
     padding: .3em .1em;
     background-color: yellowgreen;
     -webkit-animation: nextLvl 5s 0s both infinite;
@@ -982,17 +981,17 @@ html,body{
     display: flex;
     width: 100%;
     z-index: 1;
-    padding: 0 20px;
+    padding: 0 1.25em;
 }
 .particles span{
     position: relative;
     flex: 1;
-    min-width: 30px;
-    min-height: 30px;
-    bottom: 30px;
+    min-width: 1.875em;
+    min-height: 1.875em;
+    bottom: 1.875em;
     background-color: #242121;
-    box-shadow: 0 0 14px 12px #3c464844, 0 0 80px 9px #4fc3dc, -100px 0 20px #27586299, 100px 0 16px 17px #3c2b5a99;
-    margin: 0 4px;
+    box-shadow: 0 0 0.875em 0.75em #3c464844, 0 0 5em 0.563em #4fc3dc, -6.25em 0 1.25em #27586299, 6.25em 0 1em 1.063em #3c2b5a99;
+    margin: 0 0.25em;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -1004,16 +1003,16 @@ html,body{
 }
 .particles span:nth-child(even){
     background: #191818;
-    box-shadow: 0 0 20px 10px #ff2d7544, 0 0 50px #703a4d, -100px 0 50px #4fc3dc99, 100px 0 20px #4fc3dc99;
+    box-shadow: 0 0 1.25em 0.625em #ff2d7544, 0 0 3.125em #703a4d, -6.25em 0 3.125em #4fc3dc99, 6.25em 0 1.25em #4fc3dc99;
     animation: ballMovement2 15s ease infinite;
     animation-duration: calc(325s / var(--k));
 }
-.particles span:nth-child(3n){
+/* .particles span:nth-child(3n){
     background: #191818;
     box-shadow: 0 0 20px 10px #ff2d7544, 0 0 50px #703a4d, -100px 0 50px #4fc3dc99, 100px 0 20px #4fc3dc99;
     animation: ballMovement2 15s ease infinite;
     animation-duration: calc(250s / var(--k));
-}
+} */
 
 
 @keyframes ballMovement {
