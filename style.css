@@ -1178,7 +1178,7 @@ html,body{
     .nextLvlMenu {
         height: 75vmin;
         width: 80vmin;
-        justify-content: center;
+        justify-content: space-evenly;
         line-height: 1.6;
         margin-top: -1%;
     }

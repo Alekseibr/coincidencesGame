@@ -130,7 +130,8 @@ let oneTimeMusicDownload = false; //для разовой подгрузки о�
 let stateGamePause = true;//состояние play/pause в игре
 
 //удалили предоадер!!!!!!!!!!!!!!!!!!!!!!!!!!
-body.firstElementChild.parentNode.removeChild(body.firstElementChild)
+let preloader = document.querySelector('.preloader');
+preloader.remove();
 
 //функция отлючения музыки если вкладка браузера не активна
     function  browserActiveTabControl(){
