@@ -668,8 +668,8 @@ function startPlayGame(){
                         i.style.animationPlayState = 'paused';
                     }
                     //перекрываем черным цветом header чтобы небыло видно остановленных кусков анимации
-                    let header = document.querySelector('.headerGame');
-                    header.style.backgroundColor = 'black';
+                    let container = document.querySelector('.container');
+                    container.style.display = 'none';
                     let btnNexLvl = document.querySelector('.btnNexLvl');
                     btnNexLvl.onclick=(e)=>{
                       //убираем игру, чтобы не перекрывала заставку уровней и не дублировалось

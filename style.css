@@ -1154,6 +1154,42 @@ html,body{
         font-size: .8em;
     }
 }
+@media only screen and (orientation: landscape) and (max-height: 390px) { 
+    .wrap_main div {
+        height: 100px;
+    }
+    .soundSwitchMusic, .soundSwitchSound {
+        width: 40%;
+        padding: 3% 0;
+    }
+    .volumeMusic, .volumeSounds {
+        margin-bottom: 1%;
+    }
+    .btnTogller {
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-around;
+        width: 30%;
+    }
+    .wrapRecords {
+        justify-content: space-evenly;
+        line-height: 1; 
+    }
+    .nextLvlMenu {
+        height: 75vmin;
+        width: 80vmin;
+        justify-content: center;
+        line-height: 1.6;
+        margin-top: -1%;
+    }
+    .nextLvlMenu span:first-child {
+        font-size: .8em;
+    }
+    
+    .btn:not(.pause, .exit, .preloadBtn) {
+        padding: .2em 0;
+    }
+}
 
 /*hover срабатывает только если есть точный указатель*/
 @media (pointer:fine) {
