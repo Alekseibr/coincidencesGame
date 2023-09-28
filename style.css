@@ -1062,6 +1062,45 @@ html,body{
     }
 }
 
+/* кнопка рекламы в игре */
+.btnRewardedAd{
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    cursor: pointer;
+}
+.windowRewardedAd{
+    visibility: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    color: white;
+    background-color: orange;
+}
+.wrapTextWindowRewardedAd{
+    display: flex;
+    align-items: center;
+}
+.windowRewardedAd > div:nth-child(1){
+    text-align: center;
+    background-color: blue;
+}
+.wrapTextWindowRewardedAd div{
+    flex: 1;
+    text-align: center;
+    background-color: red;
+}
+
 @media only screen and (orientation: landscape) and (min-width: 1024px) and (max-width: 1200px) { 
 	.wrap_main div {
         height: 180px;
@@ -1473,4 +1512,22 @@ html,body{
         margin-bottom: 12%;
     }
 
+}
+@media (min-aspect-ratio: 21/9) { 
+    html{
+        background-color: #000000;
+    }
+    body{
+        width: 100vh;
+        margin-left: auto;
+        margin-right: auto;
+    } 
+    .wrap_main div {
+        height: 20vmin;
+        border-radius: 5vmin;
+    }
+    .btn:not(.pause, .exit, .preloadBtn) {
+        font-size: 4vh;
+        padding: .6em .4em;
+    }
 }

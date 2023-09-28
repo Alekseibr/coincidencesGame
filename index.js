@@ -138,9 +138,9 @@ preloader.remove();
         let minutes = document.querySelector('.min');
         let seconds = document.querySelector('.sec')
         if(currentMusicState){
-            //если вкладка браузера активна и музыка не выключена в настройках и текущая музыка не заставка уровней, то проигрываем текущую музыку
+            //если вкладка браузера активна и текущая музыка не заставка уровней
             if (!document.hidden && currentMusicState.id != 'playerSplash'){
-                
+                //если музыка не выключена в настройках и текущая музыка не плохой или хороший конец уровня и не пауза, то проигрываем текущую музыку
                 if(volumeSwitchStateMusic && currentMusicState.id != 'playerLvlEndBad'  && currentMusicState.id != 'playerLvlEndGood' && stateGamePause){
                     currentMusicState.play();
                 }
@@ -149,10 +149,10 @@ preloader.remove();
                         progressTimerGame();
                         timerGame();
                     } 
+                }
             }
-            }
-            else {
-              //  gamePause();
+            //иначе если вкладка браузера свернута или не видна (открыта новая вкладка), то остановится музыка и таймер с прогрессом
+            else if(document.hidden) {
                 currentMusicState.pause();
                 clearInterval(idTimer);
                 idTimer = 'off';
@@ -408,11 +408,22 @@ function startPlayGame(){
     }
     //увеличиваем время через каждые пройденные 10 уровней
     if(lvl % 10 == 0){
-        min = 11;
-        sec = 30;
+        min = 8;
+        sec = '00';
     }
     body.insertAdjacentHTML('afterbegin', 
     `<div class="wrapGame">
+        <div class="windowRewardedAd">
+            <div>Открыть все карточки на 10 секунд</div>
+            <div class="wrapTextWindowRewardedAd">
+                <div>
+                    <button class="lookRewardedAd">Смотреть рекламу</button>
+                </div>
+                <div>
+                    <button class="backGame">Выход</button>
+                </div>
+            </div>
+        </div>
         <div class="headerGame">
             <div class="wrapTimer">
                 <div class="timer"><span class="min">${min}</span><span class="min">:</span><span class="sec">${sec}</span></div>
@@ -475,6 +486,7 @@ function startPlayGame(){
                 <div class="animationBlock"></div>
             </div>
             <div class="gamePole">
+                <div class="btnRewardedAd">add</div>
             </div>
         </div>
         
@@ -521,6 +533,33 @@ function startPlayGame(){
         /**************************************************************************/ 
         resizeCards();//меняем размер карточек по мере их увеличения
         /**************************************************************************/
+
+        //*******обработчик открытия окна рекламы за вознаграждение******//
+        let btnRewardedAd = document.querySelector('.btnRewardedAd');
+        let backGame = document.querySelector('.backGame');
+        let lookRewardedAd = document.querySelector('.lookRewardedAd');
+
+        //открытие окна рекламы
+        btnRewardedAd.onclick = (e) => openWindowRewardedAd(e);
+
+        function openWindowRewardedAd(e){
+            gamePauseOn(e);
+        }
+
+        //закрытие окна рекламы
+        backGame.onclick = (e) => closeWindowRewardedAd(e);
+        function closeWindowRewardedAd(e){
+            gamePauseOff(e);
+        }
+
+        //обработчик просмотра рекламы при нажатии кнопки посмотреть
+        lookRewardedAd.onclick = () =>{
+            console.log('Релама включилась');
+            // тут вставляем метод Яндекса или выносим в отдельную функцию
+            //надо сразу закрывать windowRewardedAd при показе реальной рекламы, но чтобы игра была в тормозе,
+            //потом открывать карточки на 10 секунд, закрывать их обратно и стартовать игру!
+        }
+        //*******обработчик открытия окна рекламы за вознаграждение******//
 
         //обработчик открытия карточек
         frontSideCard.addEventListener('click', openCards);
@@ -696,17 +735,17 @@ function startPlayGame(){
     
     //обработчик кнопки паузы в игре
     let btnPause = document.querySelector('.pause');
-    btnPause.addEventListener('click', ()=>{
+    btnPause.addEventListener('click', (e)=>{
         let header = document.querySelector('.headerGame');
         if(min == 0 && sec == 0 || lvlComplite) return;
         if(stateGamePause){ 
             header.style.backgroundColor = 'rgba(0, 0, 0, 0.7)'; //корректировка header по цвету при паузе
             btnPause.innerText = 'играть';
-            gamePauseOn();
+            gamePauseOn(e);
         }else{
             header.style.backgroundColor = 'transparent'; //корректировка header по цвету при отключении паузы
             btnPause.innerText = 'пауза';
-            gamePauseOff();
+            gamePauseOff(e);
         }
     });
     exit();    //кнопка выход из игры
@@ -716,21 +755,45 @@ function startPlayGame(){
     
 
 //функция кнопки паузы в игре
-function gamePauseOn(){
-    let pauseBlock = document.querySelector('.pauseBlock');
-     stateGamePause = false;
-     currentMusicState.pause();
-     clearInterval(idTimer);
-     cancelAnimationFrame(idAnimationProgress);
-     pauseBlock.style.display= 'block';
+function gamePauseOn(e){
+    //если нажата кнопка паузы в игре
+    if(e.target.className == 'btn pause'){
+        let pauseBlock = document.querySelector('.pauseBlock');
+        stateGamePause = false;
+        currentMusicState.pause();
+        clearInterval(idTimer);
+        cancelAnimationFrame(idAnimationProgress);
+        pauseBlock.style.display= 'block';
+    }
+    //если нажатка кнопка показа рекламы
+    else if(e.target.className == 'btnRewardedAd'){
+        let windowRewardedAd = document.querySelector('.windowRewardedAd');
+        stateGamePause = false;
+        currentMusicState.pause();
+        clearInterval(idTimer);
+        cancelAnimationFrame(idAnimationProgress);
+        windowRewardedAd.style.visibility = 'visible';
+    } 
 }
+
 //функция отмены кнопки паузы в игре
-function gamePauseOff(){
-    let pauseBlock = document.querySelector('.pauseBlock');
-    stateGamePause = true;
-    progressTimerGame();
-    timerGame();
-    pauseBlock.style.display= 'none';
+function gamePauseOff(e){
+    //если нажатка кнопка возврата в игру из паузы
+    if(e.target.className == 'btn pause'){
+        let pauseBlock = document.querySelector('.pauseBlock');
+        stateGamePause = true;
+        progressTimerGame();
+        timerGame();
+        pauseBlock.style.display= 'none';
+    }
+    //если нажатка кнопка возврата в игру из рекламы за вознаграждение
+    else if(e.target.className == 'backGame'){
+        let windowRewardedAd = document.querySelector('.windowRewardedAd');
+        stateGamePause = true;
+        progressTimerGame();
+        timerGame();
+        windowRewardedAd.style.visibility = 'hidden';
+    }
 }
 
 function options(){
@@ -1209,7 +1272,7 @@ function restartGame(){
 function progressTimerGame (){
     let timer = document.querySelector('.timer')
     let start = performance.now();
-    let duration = (min * 60 + sec) * 1000;
+    let duration = (+min * 60 + +sec) * 1000;
    
     requestAnimationFrame(function animation(time){
     
