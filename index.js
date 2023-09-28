@@ -128,6 +128,7 @@ let activeTabInterval; // Интервал отслеживающий кажду
 let idAnimationProgress;
 let oneTimeMusicDownload = false; //для разовой подгрузки общей музыки и звуков игры по действию пользователя
 let stateGamePause = true;//состояние play/pause в игре
+let start = 0;//линия прогресса таймера
 
 //удалили предоадер!!!!!!!!!!!!!!!!!!!!!!!!!!
 let preloader = document.querySelector('.preloader');
@@ -156,7 +157,7 @@ preloader.remove();
                 currentMusicState.pause();
                 clearInterval(idTimer);
                 idTimer = 'off';
-                cancelAnimationFrame(idAnimationProgress);
+                clearInterval(idAnimationProgress);
             }
         }
     }
@@ -400,6 +401,7 @@ async function levelSplash(){
 
 function startPlayGame(){  
     lvlComplite = false;
+    start = 0;//обнуляем линию прогресса таймера
     let score = 0;//очки уровня
      //Количество карточек на каждом четном уровне, кроме 2 уровня
     //пока что максимум 22 карточки
@@ -426,7 +428,12 @@ function startPlayGame(){
         </div>
         <div class="headerGame">
             <div class="wrapTimer">
-                <div class="timer"><span class="min">${min}</span><span class="min">:</span><span class="sec">${sec}</span></div>
+                <div class="timer">
+                <div class="progressLine"></div>
+                    <span class="min">${min}</span>
+                    <span class="min">:</span>
+                    <span class="sec">${sec}</span>
+                </div>
             </div>
             <div class="wrapPause">
                 <button class="btn pause">пауза</button>
@@ -641,7 +648,7 @@ function startPlayGame(){
                     
                     //останавливаем часы и прогресс
                     clearInterval(idTimer);
-                    cancelAnimationFrame(idAnimationProgress);
+                    clearInterval(idAnimationProgress);
                     //сразу очищаем массив совпавших карточек
                     cardsMatch = [];
                     changeSoundControl('lvlEndGood');
@@ -762,7 +769,7 @@ function gamePauseOn(e){
         stateGamePause = false;
         currentMusicState.pause();
         clearInterval(idTimer);
-        cancelAnimationFrame(idAnimationProgress);
+        clearInterval(idAnimationProgress);
         pauseBlock.style.display= 'block';
     }
     //если нажатка кнопка показа рекламы
@@ -771,7 +778,7 @@ function gamePauseOn(e){
         stateGamePause = false;
         currentMusicState.pause();
         clearInterval(idTimer);
-        cancelAnimationFrame(idAnimationProgress);
+        clearInterval(idAnimationProgress);
         windowRewardedAd.style.visibility = 'visible';
     } 
 }
@@ -1060,7 +1067,7 @@ function exit(){
     btnExit.onclick = function() {
     if(idTimer){
         clearInterval(idTimer);
-        cancelAnimationFrame(idAnimationProgress);
+        clearInterval(idAnimationProgress);
         allScore = 0;//убираем очки игры в default
         lvl = 1;// убираем уровень в default
         min = 7; // восстанавливаем минуты
@@ -1269,33 +1276,55 @@ function restartGame(){
 }
 
 
-function progressTimerGame (){
-    let timer = document.querySelector('.timer')
-    let start = performance.now();
-    let duration = (+min * 60 + +sec) * 1000;
+// function progressTimerGame (){
+//     let timer = document.querySelector('.timer')
+//     let start = performance.now();
+//     let duration = (+min * 60 + +sec) * 1000;
    
-    requestAnimationFrame(function animation(time){
+//     requestAnimationFrame(function animation(time){
     
-    let timeFraction = (time - start) / duration;
-    if (timeFraction > 1) timeFraction = 1;
-    //настройки цвета линии
-    let step = timeFraction * 100;
-    timer.style.background = `linear-gradient(to right, #37dd0d ${step + '%'}, transparent ${step +'%'})`;
-    if(timeFraction > 0.5){
-      timer.style.background = `linear-gradient(to right, orange ${step + '%'}, transparent ${step +'%'})`;
-    }
-    if(timeFraction > 0.8){
-      timer.style.background = `linear-gradient(to right, red ${step +'%'}, transparent ${step +'%'})`;
-    }
-    if (timeFraction < 1) {
-      idAnimationProgress = requestAnimationFrame(animation);
-    }else{
-        cancelAnimationFrame(idAnimationProgress);
-    }
+//     let timeFraction = (time - start) / duration;
+//     if (timeFraction > 1) timeFraction = 1;
+//     //настройки цвета линии
+//     let step = timeFraction * 100;
+//     timer.style.background = `linear-gradient(to right, #37dd0d ${step + '%'}, transparent ${step +'%'})`;
+//     if(timeFraction > 0.5){
+//       timer.style.background = `linear-gradient(to right, orange ${step + '%'}, transparent ${step +'%'})`;
+//     }
+//     if(timeFraction > 0.8){
+//       timer.style.background = `linear-gradient(to right, red ${step +'%'}, transparent ${step +'%'})`;
+//     }
+//     if (timeFraction < 1) {
+//       idAnimationProgress = requestAnimationFrame(animation);
+//     }else{
+//         cancelAnimationFrame(idAnimationProgress);
+//     }
     
-    });
-   
-}
+//     });
+// }
+
+function progressTimerGame() { 
+    // const m = min;
+    // const s = sec;
+    let step =  (+min * 60 +  +sec)
+    // (+m * 60 +  +s)*(60 - +m/10 - +s/1000);
+    let progressLine = document.querySelector('.progressLine');
+    start += 100/step;
+    idAnimationProgress = setInterval(function(){
+        progressLine.style.transform = `translateX(-${100 - start}%)`;
+      if(start >= 100){
+        clearInterval(idAnimationProgress);
+      }
+      //настройки цвета линии
+      if(start > 50 && start < 100){
+        progressLine.style.backgroundColor = 'orange';
+      }
+      if(start > 80){
+        progressLine.style.backgroundColor = 'red';
+      }
+      start += 100/step;
+    }, 1000)
+  }
 
 }
     
