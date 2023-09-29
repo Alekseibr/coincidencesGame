@@ -125,7 +125,7 @@ let idStartTimeOut;//таймаут в рекордах для анимации 
 let idEndTimeOut;//таймаут в рекордах для анимации фона
 let idTimer; // для остановки таймера интервала
 let activeTabInterval; // Интервал отслеживающий каждую секунду активность вкладки браузера (для остановки таймера, анимации таймера, музыки)
-let idAnimationProgress;
+let idAnimationProgress;//Интервал для линии прогресса таймера
 let oneTimeMusicDownload = false; //для разовой подгрузки общей музыки и звуков игры по действию пользователя
 let stateGamePause = true;//состояние play/pause в игре
 let start = 0;//линия прогресса таймера
@@ -493,7 +493,7 @@ function startPlayGame(){
                 <div class="animationBlock"></div>
             </div>
             <div class="gamePole">
-                <div class="btnRewardedAd">add</div>
+                <div class="btnRewardedAd"></div>
             </div>
         </div>
         
@@ -1276,38 +1276,8 @@ function restartGame(){
 }
 
 
-// function progressTimerGame (){
-//     let timer = document.querySelector('.timer')
-//     let start = performance.now();
-//     let duration = (+min * 60 + +sec) * 1000;
-   
-//     requestAnimationFrame(function animation(time){
-    
-//     let timeFraction = (time - start) / duration;
-//     if (timeFraction > 1) timeFraction = 1;
-//     //настройки цвета линии
-//     let step = timeFraction * 100;
-//     timer.style.background = `linear-gradient(to right, #37dd0d ${step + '%'}, transparent ${step +'%'})`;
-//     if(timeFraction > 0.5){
-//       timer.style.background = `linear-gradient(to right, orange ${step + '%'}, transparent ${step +'%'})`;
-//     }
-//     if(timeFraction > 0.8){
-//       timer.style.background = `linear-gradient(to right, red ${step +'%'}, transparent ${step +'%'})`;
-//     }
-//     if (timeFraction < 1) {
-//       idAnimationProgress = requestAnimationFrame(animation);
-//     }else{
-//         cancelAnimationFrame(idAnimationProgress);
-//     }
-    
-//     });
-// }
-
 function progressTimerGame() { 
-    // const m = min;
-    // const s = sec;
     let step =  (+min * 60 +  +sec)
-    // (+m * 60 +  +s)*(60 - +m/10 - +s/1000);
     let progressLine = document.querySelector('.progressLine');
     start += 100/step;
     idAnimationProgress = setInterval(function(){

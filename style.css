@@ -481,7 +481,6 @@ html,body{
 
 .wrapOptions .btn {
     margin-bottom: 2%;
-    /* min-width: 5em; */
     font-size: 1em;
 }
 /*Конец настроек*/
@@ -748,7 +747,6 @@ html,body{
     background-color: #37dd0d;
     z-index: -1;
     transform: translateX(-100%);
-    /* transition: 1s;  */
 }
 .min, .sec{
     font-size: 1.2em;
@@ -1022,13 +1020,6 @@ html,body{
     animation: ballMovement2 15s ease infinite;
     animation-duration: calc(325s / var(--k));
 }
-/* .particles span:nth-child(3n){
-    background: #191818;
-    box-shadow: 0 0 20px 10px #ff2d7544, 0 0 50px #703a4d, -100px 0 50px #4fc3dc99, 100px 0 20px #4fc3dc99;
-    animation: ballMovement2 15s ease infinite;
-    animation-duration: calc(250s / var(--k));
-} */
-
 
 @keyframes ballMovement {
     0%{
@@ -1084,9 +1075,12 @@ html,body{
     right: 0;
     width: 50px;
     height: 50px;
-    background-color: red;
     cursor: pointer;
+    background: url(./imgs/ad/btnAd.svg);
+    background-color: rgb(54, 235, 44);
+    border-radius: 10px;
 }
+
 .windowRewardedAd{
     visibility: hidden;
     display: flex;
@@ -1100,21 +1094,36 @@ html,body{
     background: rgba(0, 0, 0, 0.7);
     z-index: 1000;
     color: white;
-    background-color: orange;
+    background: center / cover no-repeat url(./imgs/ad/backgroundAd.jpg);
+}
+.windowRewardedAd:nth-child(1), .windowRewardedAd button{
+    font-size: 1em;
+}
+.lookRewardedAd, .backGame{
+    cursor: pointer;
+    min-height: 50px;
+    min-width: 115px;
+    padding: 2%;
+    border-radius: 20px;
+    background-color: greenyellow;
+    font-weight: 600;
 }
 .wrapTextWindowRewardedAd{
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 }
 .windowRewardedAd > div:nth-child(1){
     text-align: center;
-    background-color: blue;
+    color: black;
+    font-weight: 900;
+    font-size: 1.5em;
+    text-shadow: 0 0 0.1em greenyellow;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
-.wrapTextWindowRewardedAd div{
-    flex: 1;
-    text-align: center;
-    background-color: red;
-}
+
 
 @media only screen and (orientation: landscape) and (min-width: 1024px) and (max-width: 1200px) { 
 	.wrap_main div {
@@ -1527,22 +1536,4 @@ html,body{
         margin-bottom: 12%;
     }
 
-}
-@media (min-aspect-ratio: 21/9) { 
-    html{
-        background-color: #000000;
-    }
-    body{
-        width: 100vh;
-        margin-left: auto;
-        margin-right: auto;
-    } 
-    .wrap_main div {
-        height: 20vmin;
-        border-radius: 5vmin;
-    }
-    .btn:not(.pause, .exit, .preloadBtn) {
-        font-size: 4vh;
-        padding: .6em .4em;
-    }
 }
