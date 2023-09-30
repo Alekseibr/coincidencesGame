@@ -7,6 +7,8 @@
     touch-action: none; /* для корректной работы тач на мобилках*/
     user-select: none;
     font-family: sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
 }
 html,body{
     width: 100%;
@@ -792,7 +794,7 @@ html,body{
     justify-content: center;
     align-content: center;
     gap: 4vh;
-    width: 90%;
+    width: 92%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -868,6 +870,10 @@ html,body{
 .sideBarGame{
     display:flex;
     flex-flow: row nowrap;
+    gap: 5%;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 1.2em;
     background-color: transparent;
     z-index: 1;
@@ -1071,6 +1077,8 @@ html,body{
 /* кнопка рекламы в игре */
 .btnRewardedAd{
     position: absolute;
+    perspective: 500px;
+    -webkit-perspective: 500px;
     bottom: 10px;
     right: 0;
     width: 50px;
@@ -1079,6 +1087,30 @@ html,body{
     background: url(./imgs/ad/btnAd.svg);
     background-color: rgb(54, 235, 44);
     border-radius: 10px;
+    z-index: 1;
+    animation: btnAdanimate 5s linear infinite;
+}
+@keyframes btnAdanimate {
+    0%{
+        transform: rotateY(-20deg);
+    }
+    50%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(20deg);
+    }
+}
+@-webkit-keyframes btnAdanimate {
+    0%{
+        transform: rotateY(-20deg);
+    }
+    50%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(20deg);
+    }
 }
 
 .windowRewardedAd{
@@ -1094,7 +1126,7 @@ html,body{
     background: rgba(0, 0, 0, 0.7);
     z-index: 1000;
     color: white;
-    background: center / cover no-repeat url(./imgs/ad/backgroundAd.jpg);
+    background: center / cover no-repeat url(./imgs/ad/backgroundAd.webp);
 }
 .windowRewardedAd:nth-child(1), .windowRewardedAd button{
     font-size: 1em;
@@ -1107,6 +1139,7 @@ html,body{
     border-radius: 20px;
     background-color: greenyellow;
     font-weight: 600;
+    
 }
 .wrapTextWindowRewardedAd{
     display: flex;
@@ -1193,6 +1226,10 @@ html,body{
     .musicVolumeScale, .soundVolumeScale {
         height: 15vh;
     }
+    .btnRewardedAd{
+        width: 35px;
+        height: 35px;
+    }
 }
 @media only screen and (orientation: landscape) and (min-width : 360px) and (max-width : 481px) { 
     .wrap_main div {
@@ -1201,6 +1238,10 @@ html,body{
     .soundSwitchMusic, .soundSwitchSound{
         width: 50%;
         padding: 3% 0;
+    }
+    .btnRewardedAd{
+        width: 30px;
+        height: 30px;
     }
 }
 @media only screen and (orientation: landscape) and (max-width: 359px) { 
@@ -1215,6 +1256,10 @@ html,body{
     }
     .recordsText{
         font-size: .8em;
+    }
+    .btnRewardedAd{
+        width: 27px;
+        height: 27px;
     }
 }
 @media only screen and (orientation: landscape) and (max-height: 390px) { 
@@ -1252,6 +1297,10 @@ html,body{
     .btn:not(.pause, .exit, .preloadBtn) {
         padding: .2em 0;
     }
+    /* .btnRewardedAd{
+        width: 27px;
+        height: 27px;
+    } */
 }
 
 /*hover срабатывает только если есть точный указатель*/
@@ -1287,6 +1336,10 @@ html,body{
     }
     .wrapGame{
         font-size: 2.2rem;
+    }
+    .btnRewardedAd{
+        width: 150px;
+        height: 150px;
     }
 }
 @media only screen and (min-width : 1500px) and (max-width : 2559px) {
@@ -1328,6 +1381,10 @@ html,body{
     .wrapGame{
         font-size: 1.2rem;
     }
+    .btnRewardedAd{
+        width: 60px;
+        height: 60px;
+    }
 }
 
 @media only screen and (min-width : 1201px) and (max-width : 1280px) and (min-device-height:968px) {
@@ -1361,6 +1418,10 @@ html,body{
     .wrapGame{
         font-size: 1.2rem;
     }
+    .btnRewardedAd{
+        width: 60px;
+        height: 60px;
+    }
 }
 @media only screen  and (min-width : 1120px) and (max-width : 1200px) and (min-device-height:968px) {
     .wrap_all footer{
@@ -1392,6 +1453,10 @@ html,body{
     }
     .wrapGame{
         font-size: 1.2rem;
+    }
+    .btnRewardedAd{
+        width: 60px;
+        height: 60px;
     }
 }
 @media only screen and (min-width : 1024px) and (max-width : 1119px) and (min-device-height:968px) {
@@ -1429,6 +1494,10 @@ html,body{
     }
     .wrapGame{
         font-size: 1.2rem;
+    }
+    .btnRewardedAd{
+        width: 70px;
+        height: 70px;
     }
 }
 @media only screen and (min-width : 768px) and (max-width : 1023px) and (min-device-height:968px) {
@@ -1520,6 +1589,10 @@ html,body{
     .volumeMusic, .volumeSounds {
         margin-bottom: 17%;
     }
+    .btnRewardedAd{
+        width: 35px;
+        height: 35px;
+    }
 
 }
 @media only screen and (orientation: portrait) and (min-width : 320px) and (max-width : 359px) {
@@ -1535,5 +1608,15 @@ html,body{
     .volumeMusic{
         margin-bottom: 12%;
     }
+    .btnRewardedAd{
+        width: 30px;
+        height: 30px;
+    }
+}
 
+@media only screen and (orientation: portrait) and (max-width : 319px) {
+    .btnRewardedAd{
+        width: 22px;
+        height: 22px;
+    }
 }
